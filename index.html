@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Asım Oudeh - Bilişim Teknolojileri Öğrencisi" />
+  <meta name="author" content="Asim Oudeh" />
+  <title>Asım Oudeh | Portfolio</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="#hero" class="nav-logo">Asım Oudeh</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hakkimda"     class="nav-link">Hakkımda</a></li>
+        <li><a href="#beceriler"    class="nav-link">Beceriler</a></li>
+        <li><a href="#sertifikalar" class="nav-link">Sertifikalar</a></li>
+        <li><a href="#proje"        class="nav-link">Proje</a></li>
+        <li><a href="#iletisim"     class="nav-link">İletişim</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menuyu ac">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h1 class="hero-name">Asım Oudeh</h1>
+    <p class="hero-title">Bilişim Teknolojileri Ögrencisi</p>
+    <p class="hero-sub">Web Geliştirici &amp; Yazılım Meraklısı</p>
+    <div class="hero-btns">
+      <a href="#proje"    class="btn btn-primary">Projeyi Gör</a>
+      <a href="#iletisim" class="btn btn-outline">İletişime Geç</a>
+    </div>
+  </section>
+
+  <section class="section" id="hakkimda">
+    <div class="container">
+      <h2 class="section-title">Hakkımda</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Web programlama ve yazılım geliştirmeye ilgi duyan, HTML, CSS,
+          JavaScript ve bazı frameworkleri ile projeler üreten bir
+          <strong>lise öğrencisiyim</strong>. GitHub üzerinde aktif olarak kod paylaşıyor,
+          her gün yeni bir şeyler öğrenmeye çalışıyorum.</p>
+        </div>
+        <div class="about-card">
+          <div class="info-row">
+            <i class="fas fa-school"></i>
+            <div>
+              <span class="info-label">Okul</span>
+              <span class="info-value">Toki Kayaşehir Mesleki ve Teknik Anadolu Lisesi</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <i class="fas fa-code"></i>
+            <div>
+              <span class="info-label">Bölüm</span>
+              <span class="info-value">Yazılım Geliştirme Bölümü</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <i class="fas fa-user-graduate"></i>
+            <div>
+              <span class="info-label">Durum</span>
+              <span class="info-value">Lise Öğrencisi (Devam Ediyor)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-gray" id="beceriler">
+    <div class="container">
+      <h2 class="section-title">Beceriler</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <i class="fab fa-html5 card-icon"></i>
+          <h3>HTML5</h3>
+          <p>Semantik yapı, erişilebilirlik</p>
+        </div>
+        <div class="card">
+          <i class="fab fa-css3-alt card-icon"></i>
+          <h3>CSS3</h3>
+          <p>Flexbox, Grid, Animasyon</p>
+        </div>
+        <div class="card">
+          <i class="fab fa-js card-icon"></i>
+          <h3>JavaScript</h3>
+          <p>DOM, ES6+, Vanilla JS</p>
+        </div>
+        <div class="card">
+          <i class="fab fa-github card-icon"></i>
+          <h3>GitHub</h3>
+          <p>Versiyon kontrolu</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-language card-icon"></i>
+          <h3>B2 Ingilizce</h3>
+          <p>Teknik okuma ve yazma</p>
+        </div>
+        <div id="fazla" class="card">
+          <i class="fas fa-lightbulb card-icon"></i>
+          <h3>Diğer</h3>
+          <p><strong>C#, Python, Kotlin, Bootstrap, NodeJs</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sertifikalar">
+    <div class="container">
+      <h2 class="section-title">Sertifikalar</h2>
+      <div class="cards-grid">
+        <div class="card cert-card">
+          <div class="cert-info">
+            <div class="cert-badge fcc">FCC</div>
+            <span class="cert-provider"><h5><strong>FreeCodeCamp</strong></h5><h4>Responsive Web Design</h4></span>
+          </div>
+          <img id="cert-img" src="img/Web_Design_Certification.png" alt="Responsive Web Design Sertifikası">
+        </div>
+        <div class="card cert-card">
+          <div class="cert-info">
+            <div class="cert-badge fcc">FCC</div>
+            <span class="cert-provider"><h5><strong>FreeCodeCamp</strong></h5><h4>JavaScript</h4></span>
+          </div>
+          <img id="cert-img" src="img/Web_Design_Certification.png" alt="Responsive Web Design Sertifikası">
+        </div>
+        <div class="card cert-card">
+          <div class="cert-info">
+            <div class="cert-badge btk">FCC</div>
+            <span class="cert-provider"><h5><strong>BTK Akademi</strong></h5><h4>Uygulamalı Figma</h4></span>
+          </div>
+          <img id="cert-img" src="img/Uygulamalı_Figma_Sertifika.jpg" alt="Responsive Web Design Sertifikası">
+        </div>
+        <div class="card cert-card">
+          <div class="cert-info">
+            <div class="cert-badge btk">FCC</div>
+            <span class="cert-provider"><h5><strong>BTK Akademi</strong></h5><h4>B2 İngilizce</h4></span>
+          </div>
+          <img id="cert-img" src="img/B2_Seviye_İngilizce_Sertifika.jpg" alt="Responsive Web Design Sertifikası">
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="proje">
+    <div class="container">
+      <h2 class="section-title light">Proje</h2>
+      <div class="project-box">
+        <div class="project-info">
+          <span class="project-badge">Öne Çıkan Proje</span>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+          </div>
+          <h3 class="project-title">Chatbot Projesi</h3>
+          <p class="project-desc">JavaScript ile geliştirdiğim interaktif sohbet botu.
+          Kullanıcıdan mesaj alıp yanıt üretebilen, temiz arayüzü ile modern bir web uygulamasi.</p>
+          <ul class="project-list">
+            <li><i class="fas fa-check"></i> Gerçek zamanlı sohbet arayüzü</li>
+            <li><i class="fas fa-check"></i> Temiz ve duyarlı tasarım</li>
+            <li><i class="fas fa-check"></i> Saf JavaScript</li>
+          </ul>
+          <div class="project-btns">
+            <a href="https://github.com/devasimo" target="_blank" class="btn btn-primary">
+              <i class="fab fa-github"></i> GitHub'da Gör
+            </a>
+          </div>
+        </div>
+        <div class="chat-window">
+          <div class="chat-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="chat-label">Asım's Chatbot</span>
+          </div>
+          <div class="chat-body">
+            <div class="msg bot">Merhaba! Nasıl yardımcı olabilirim?</div>
+            <div class="msg user">Nasıl calışıyorsun?</div>
+            <div class="msg bot">JavaScript ile yazıldım!</div>
+            <div class="typing"><span></span><span></span><span></span></div>
+          </div>
+          <div class="chat-footer">
+            <input type="text" placeholder="Mesaj yazın..." readonly />
+            <button><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="iletisim">
+    <div class="container">
+      <h2 class="section-title">İletişim</h2>
+      <p class="contact-lead">Proje fikriniz mi var? Her zaman buradayım.</p>
+      <div class="contact-grid">
+        <a href="mailto:asimblsmc16@gmail.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <span class="c-label">E-posta</span>
+          <span class="c-value">asimblsmc16@gmail.com</span>
+        </a>
+        <a href="tel:+905510882693" class="contact-card">
+          <i class="fas fa-phone"></i>
+          <span class="c-label">Telefon</span>
+          <span class="c-value">0551 088 26 93</span>
+        </a>
+        <a href="https://github.com/devasimo" target="_blank" class="contact-card">
+          <i class="fab fa-github"></i>
+          <span class="c-label">GitHub</span>
+          <span class="c-value">github.com/devasimo</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Asım Oudeh. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
