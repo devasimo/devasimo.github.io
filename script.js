@@ -1,4 +1,3 @@
-// DOM hazir olunca calistir
 document.addEventListener('DOMContentLoaded', function () {
 
   /* ---- 1. MOBiL MENU ---- */
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     navMenu.classList.toggle('open');
   });
 
-  // Bir nav linkine tiklaninca menuyu kapat (mobil)
   var navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(function (link) {
     link.addEventListener('click', function () {
@@ -24,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   allLinks.forEach(function (link) {
     link.addEventListener('click', function (e) {
       var target = document.querySelector(this.getAttribute('href'));
-      if (!target) return;       // hedef yoksa cik
+      if (!target) return;
       e.preventDefault();
 
       var headerHeight = document.querySelector('.header').offsetHeight;
@@ -32,31 +30,4 @@ document.addEventListener('DOMContentLoaded', function () {
       window.scrollTo({ top: top, behavior: 'smooth' });
     });
   });
-
 });
-/* ---- Api key koruması ---- */
-
-async function sendMessageToBot(userMessage) {
-  // Kullanıcıya "Yazıyor..." göster (opsiyonel)
-  
-  try {
-    // Kendi güvenli API'ne istek at
-    const response = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: userMessage })
-    });
-
-    const data = await response.json();
-
-    if (data.error) {
-      return "Üzgünüm, bir hata oluştu.";
-    }
-
-    return data.reply; // Grok'tan gelen cevabı döndür
-
-  } catch (error) {
-    console.error('Hata:', error);
-    return "Bağlantı hatası.";
-  }
-}
