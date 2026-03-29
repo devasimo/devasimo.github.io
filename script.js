@@ -34,3 +34,29 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+/* ---- Api key koruması ---- */
+
+async function sendMessageToBot(userMessage) {
+  // Kullanıcıya "Yazıyor..." göster (opsiyonel)
+  
+  try {
+    // Kendi güvenli API'ne istek at
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: userMessage })
+    });
+
+    const data = await response.json();
+
+    if (data.error) {
+      return "Üzgünüm, bir hata oluştu.";
+    }
+
+    return data.reply; // Grok'tan gelen cevabı döndür
+
+  } catch (error) {
+    console.error('Hata:', error);
+    return "Bağlantı hatası.";
+  }
+}

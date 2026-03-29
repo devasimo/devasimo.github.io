@@ -209,6 +209,13 @@ button { cursor: pointer; font-family: inherit; }
 h5 {
   margin-bottom: 10px;
 }
+div#diger {
+  display: flex;
+  align-items: center;
+}
+div#diger h3, p{
+  margin-left: 20px;
+}
 
 /* ============================================
    PROJE
