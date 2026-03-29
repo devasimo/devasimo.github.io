@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarih Chatbotu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+Display:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon2.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <div id="bg-layer"></div>
+  <div class="pattern-overlay"></div>
+  <div id="toast"></div>
+ 
+  <div id="app">
+    <header>
+      <button id="theme-toggle" title="Tema Değiştir">☀</button>
+      <div class="header-ornament">
+        <div class="ornament-line"></div>
+        <div class="ornament-star">✦</div>
+        <div class="ornament-line"></div>
+      </div>
+      <h1>
+        Tarihi Sohbet
+        <span>Tarihin Büyükleri ile Konuş</span>
+      </h1>
+      <div class="header-ornament" style="margin-top:10px">
+        <div class="ornament-line"></div>
+        <div class="ornament-star" style="animation-delay: -4s">✦</div>
+        <div class="ornament-line"></div>
+      </div>
+    </header>
+ 
+    
+    <div class="characters-section">
+      <div class="characters-label">— Bir Karakter Seçin —</div>
+      <div class="characters-grid" id="char-grid"></div>
+    </div>
+ 
+    
+    <div id="char-info">
+      <div class="info-name" id="info-name"></div>
+      <div class="info-desc" id="info-desc"></div>
+    </div>
+ 
+    <div class="divider"><span>Sohbet</span></div>
+    <br>
+ 
+    
+    <div id="chat-box">
+      <div class="chat-empty" id="empty-state">
+        <div class="empty-icon">🕌</div>
+        <p>Yukarıdan bir tarihi şahsiyet seçin<br>ve diyaloğunuzu başlatın...</p>
+      </div>
+    </div>
+ 
+    
+    <div class="input-row">
+      <textarea id="user-input" placeholder="Mesajınızı yazın... (Enter ile gönder)" rows="1"></textarea>
+      <button id="send-btn">Gönder ⟶</button>
+    </div>
+ 
+    <footer>
+      Powered by <a href="https://huggingface.co" target="_blank">HuggingFace</a> · Qwen2.5-7B-Instruct
+    </footer>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
