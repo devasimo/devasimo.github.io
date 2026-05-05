@@ -37,12 +37,19 @@
 }
 
 html { scroll-behavior: smooth; }
-
+html, body {
+    
+    
+    
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
 body {
   font-family: 'Crimson Pro', Georgia, serif;
   background: var(--bg-primary);
   color: var(--text-main);
-  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   transition: background var(--transition), color var(--transition);
   position: relative;
@@ -55,12 +62,20 @@ body {
     inset: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* En arkaya itiyoruz */
-    background-size: cover;
-    background-position: center;
+    z-index: -1;
+
+    /* Resmi kapla ama aşırı büyütmeyi engelle */
+    background-size: cover; 
+    
+    /* Resmin en önemli kısmını (genelde üst-orta) odakla */
+    background-position: center 20%; 
+    
     background-repeat: no-repeat;
+    
+    /* Sayfa kaydıkça resmin saçmalamasını engeller */
+    background-attachment: fixed; 
+    
     transition: opacity 0.8s ease-in-out;
-    opacity: 0;
 }
 #bg-layer::after {
     content: '';
