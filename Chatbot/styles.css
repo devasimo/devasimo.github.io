@@ -46,27 +46,28 @@ body {
   overflow-x: hidden;
   transition: background var(--transition), color var(--transition);
   position: relative;
+  background: transparent !important; 
 }
 
 /* BACKGROUND */
 #bg-layer {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: opacity 0.8s ease;
-  opacity: 0;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* En arkaya itiyoruz */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.8s ease-in-out;
+    opacity: 0;
 }
 #bg-layer::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom,
-    rgba(0,0,0,0.72) 0%,
-    rgba(0,0,0,0.45) 40%,
-    rgba(0,0,0,0.82) 100%);
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
+    z-index: 1;
 }
 .light-theme #bg-layer::after {
   background: linear-gradient(to bottom,
